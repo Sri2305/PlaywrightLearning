@@ -17,5 +17,6 @@ test('test', async ({ page }) => {
   });
   await test.step('Verify error message', async () => {
   await expect(page.getByRole('alert')).toContainText('Incorrect username or password.');
+  await expect(page.getByRole('alert')).toBeVisible();
   });
 });
